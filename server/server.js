@@ -9,6 +9,9 @@ let activated = false;
 
 app.get("/activate", (req, res) => {
   activated = true;
+  setTimeout(() => {
+    activated = false;
+  }, 10000);
   res.send("activated");
   console.log("activated");
 });
