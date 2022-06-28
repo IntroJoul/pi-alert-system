@@ -4,7 +4,7 @@ const cors = require("cors");
 const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
-app.use(require("./routes/record"));
+app.use(require("./routes/activate"));
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
