@@ -5,6 +5,7 @@ const express = require("express");
 const activateRoutes = express.Router();
 
 activateRoutes.route("/activate").get(function (req, res) {
+  res.send("activated");
   console.log("activated");
 });
 
