@@ -5,9 +5,17 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+let activated = false;
+
 app.get("/activate", (req, res) => {
-  res.send("it works");
-  console.log("it works");
+  activated = true;
+  res.send("activated");
+  console.log("activated");
+});
+
+app.get("/status", (req, res) => {
+  res.send(activated);
+  console.log("status requested");
 });
 
 app.listen(port, () => {
