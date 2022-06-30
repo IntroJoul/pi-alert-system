@@ -1,6 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
-import React from 'react';
+import logo from "./logo.svg";
+import "./App.css";
+import React from "react";
 
 class Status extends React.Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class Status extends React.Component {
   }
 
   getData() {
-    fetch('http://localhost:5000/status')
+    fetch("http://localhost:5000/status")
       .then((res) => res.json())
       .then((result) => {
         console.log(result);
@@ -38,7 +38,7 @@ class Status extends React.Component {
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <Status />
     </div>
   );
