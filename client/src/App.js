@@ -36,10 +36,20 @@ class Status extends React.Component {
   }
 }
 
+class ActivateButton extends React.Component {
+  handleClick = () => {
+    fetch("http://localhost:5000/activate");
+  };
+  render() {
+    return <button onClick={this.handleClick}>Activate</button>;
+  }
+}
+
 function App() {
   return (
     <div className="App">
       <Status />
+      <ActivateButton />
     </div>
   );
 }
