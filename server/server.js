@@ -14,12 +14,10 @@ app.get("/activate", (req, res) => {
     activated = false;
   }, 10000);
   res.send("activated");
-  console.log("activated");
 });
 
 app.get("/status", (req, res) => {
   res.send(activated);
-  console.log("status requested");
 });
 
 app.listen(port, () => {
