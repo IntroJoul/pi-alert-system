@@ -17,7 +17,7 @@ class Status extends React.Component {
   }
 
   getData() {
-    fetch("http://192.168.1.200:5000/status")
+    fetch("http://localhost:5000/status")
       .then((res) => res.json())
       .then((result) => {
         console.log(result);
@@ -29,7 +29,7 @@ class Status extends React.Component {
 
   render() {
     if (this.state.data) {
-      return <div>True</div>;
+      return <div style={"color:blue"}>&#9632;</div>;
     }
     return <div>False</div>;
   }
@@ -37,7 +37,7 @@ class Status extends React.Component {
 
 class ActivateButton extends React.Component {
   handleClick = () => {
-    fetch("http://192.168.1.200:5000/activate");
+    fetch("http://localhost:5000/activate");
   };
   render() {
     return <button onClick={this.handleClick}>Activate</button>;
