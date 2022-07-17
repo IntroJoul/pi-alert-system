@@ -28,11 +28,10 @@ class Status extends React.Component {
   }
 
   render() {
-    if (this.state.data === true) {
+    if (this.state.data) {
       return <div>True</div>;
-    } else {
-      return <div>False</div>;
     }
+    return <div>False</div>;
   }
 }
 
