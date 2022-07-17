@@ -1,6 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
+import Alert from "react-bootstrap/Alert";
 
 class Status extends React.Component {
   constructor(props) {
@@ -29,9 +31,8 @@ class Status extends React.Component {
 
   render() {
     if (this.state.data) {
-      return <div style={"color:blue"}>&#9632;</div>;
+      return <Alert variant="danger">Button pressed</Alert>;
     }
-    return <div>False</div>;
   }
 }
 
